@@ -9,8 +9,8 @@ import (
 )
 
 func main() {
-	a := []int{1, 2, 3, 4}
-	fmt.Println(twoSum(a, 6))
+	a := []int{-1,-2,-3,-4,-5,-8}
+	fmt.Println(twoSum(a, -4))
 }
 
 func twoSum(nums []int, target int) []int {
@@ -18,7 +18,7 @@ func twoSum(nums []int, target int) []int {
 	c := 0
 	for k1,i := range nums {
 		c += 1
-		tmp := nums[c:4]
+		tmp := nums[c:len(nums)]
 		for k2,j := range tmp {
 		
 			if i+j == target {
