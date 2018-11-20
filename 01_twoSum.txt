@@ -16,19 +16,16 @@ func main() {
 func twoSum(nums []int, target int) []int {
 	var re []int
 	c := 0
-	for _,i := range nums {
+	for k1,i := range nums {
 		c += 1
 		tmp := nums[c:4]
-		for _,j := range tmp {
+		for k2,j := range tmp {
 		
 			if i+j == target {
-				re = append(re,i)
-				re = append(re,j)
+				re = append(re,k1)
+				re = append(re,k2 + c)
 			}
 		}
 	}
 	return re
 }
-
-
-
